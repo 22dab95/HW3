@@ -1,3 +1,15 @@
+Run arguments:
+
+execute -ix <filename>
+
+Example:
+
+execute -ix case.txt
+
+For Eclipse:
+
+Add -std=gnu++11 to build settings
+
 If you are on Windows, you must first install
 the GNU g++ compiler and the 'rm' and 'make' 
 utilities from Cygwin: https://www.cygwin.com/ 
