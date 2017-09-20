@@ -2,6 +2,7 @@
 .cproject
 .project
 .settings/
+Debug/*
 
 # Prerequisites
 *.d
