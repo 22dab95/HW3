@@ -34,7 +34,7 @@ enum class PascalTokenType
     // Special symbols.
     PLUS, MINUS, STAR, SLASH, COLON_EQUALS,
     DOT, COMMA, SEMICOLON, COLON, QUOTE,
-    EQUALS, NOT_EQUALS, LESS_THAN, LESS_EQUALS,
+    EQUALS, ARROW, NOT_EQUALS, LESS_THAN, LESS_EQUALS,
     GREATER_EQUALS, GREATER_THAN, LEFT_PAREN, RIGHT_PAREN,
     LEFT_BRACKET, RIGHT_BRACKET, LEFT_BRACE, RIGHT_BRACE,
     UP_ARROW, DOT_DOT,
@@ -66,6 +66,7 @@ constexpr PascalTokenType PT_MOD = PascalTokenType::MOD;
 constexpr PascalTokenType PT_NIL = PascalTokenType::NIL;
 constexpr PascalTokenType PT_NOT = PascalTokenType::NOT;
 constexpr PascalTokenType PT_OF = PascalTokenType::OF;
+constexpr PascalTokenType PT_OTHERWISE = PascalTokenType::OTHERWISE;
 constexpr PascalTokenType PT_OR = PascalTokenType::OR;
 constexpr PascalTokenType PT_PACKED = PascalTokenType::PACKED;
 constexpr PascalTokenType PT_PROCEDURE = PascalTokenType::PROCEDURE;
@@ -80,6 +81,7 @@ constexpr PascalTokenType PT_TYPE = PascalTokenType::TYPE;
 
 constexpr PascalTokenType PT_UNTIL = PascalTokenType::UNTIL;
 constexpr PascalTokenType PT_VAR = PascalTokenType::VAR;
+constexpr PascalTokenType PT_WHEN = PascalTokenType::WHEN;
 constexpr PascalTokenType PT_WHILE = PascalTokenType::WHILE;
 constexpr PascalTokenType PT_WITH = PascalTokenType::WITH;
 
@@ -94,6 +96,7 @@ constexpr PascalTokenType PT_SEMICOLON = PascalTokenType::SEMICOLON;
 constexpr PascalTokenType PT_COLON = PascalTokenType::COLON;
 constexpr PascalTokenType PT_QUOTE = PascalTokenType::QUOTE;
 constexpr PascalTokenType PT_EQUALS = PascalTokenType::EQUALS;
+constexpr PascalTokenType PT_ARROW = PascalTokenType::ARROW;
 constexpr PascalTokenType PT_NOT_EQUALS = PascalTokenType::NOT_EQUALS;
 
 constexpr PascalTokenType PT_LESS_THAN = PascalTokenType::LESS_THAN;

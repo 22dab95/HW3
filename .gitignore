@@ -3,6 +3,7 @@
 .project
 .settings/
 Debug/*
+Chapter8.exe*
 
 # Prerequisites
 *.d

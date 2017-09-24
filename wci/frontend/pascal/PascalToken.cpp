@@ -29,9 +29,9 @@ void PascalToken::initialize()
     {
         "AND", "ARRAY", "BEGIN", "CASE", "CONST", "DIV", "DO", "DOWNTO",
         "ELSE", "END", "FILE", "FOR", "FUNCTION", "GOTO", "IF", "IN",
-        "LABEL", "MOD", "NIL", "NOT", "OF", "OR", "PACKED", "PROCEDURE",
+        "LABEL", "MOD", "NIL", "NOT", "OF", "OTHERWISE", "OR", "PACKED", "PROCEDURE",
         "PROGRAM", "RECORD", "REPEAT", "SET", "THEN", "TO", "TYPE",
-        "UNTIL", "VAR", "WHILE", "WITH"
+        "UNTIL", "VAR", "WHEN", "WHILE", "WITH"
     };
 
     vector<PascalTokenType> rw_keys =
@@ -59,6 +59,7 @@ void PascalToken::initialize()
         PascalTokenType::NIL,
         PascalTokenType::NOT,
         PascalTokenType::OF,
+		PascalTokenType::OTHERWISE,
         PascalTokenType::OR,
         PascalTokenType::PACKED,
         PascalTokenType::PROCEDURE,
@@ -73,6 +74,7 @@ void PascalToken::initialize()
 
         PascalTokenType::UNTIL,
         PascalTokenType::VAR,
+		PascalTokenType::WHEN,
         PascalTokenType::WHILE,
         PascalTokenType::WITH
     };
@@ -84,7 +86,7 @@ void PascalToken::initialize()
 
     vector<string> ss_strings =
     {
-        "+", "-", "*", "/", ":=", ".", ",", ";", ":", "'", "=", "<>",
+        "+", "-", "*", "/", ":=", ".", ",", ";", ":", "'", "=", "=>", "<>",
         "<", "<=", ">=", ">", "(", ")", "[", "]", "{", "}",  "^", ".."
     };
 
@@ -101,6 +103,7 @@ void PascalToken::initialize()
         PascalTokenType::COLON,
         PascalTokenType::QUOTE,
         PascalTokenType::EQUALS,
+		PascalTokenType::ARROW,
         PascalTokenType::NOT_EQUALS,
 
         PascalTokenType::LESS_THAN,
@@ -125,7 +128,7 @@ void PascalToken::initialize()
     vector<string> ss_names =
     {
         "PLUS", "MINUS", "STAR", "SLASH", "COLON_EQUALS", "DOT", "COMMA",
-        "SEMICOLON", "COLON", "QUOTE", "EQUALS", "NOT_EQUALS",
+        "SEMICOLON", "COLON", "QUOTE", "EQUALS", "ARROW", "NOT_EQUALS",
 
         "LESS_THAN", "LESS_EQUALS", "GREATER_EQUALS", "GREATER_THAN",
         "LEFT_PAREN", "RIGHT_PAREN", "LEFT_BRACKET", "RIGHT_BRACKET",
