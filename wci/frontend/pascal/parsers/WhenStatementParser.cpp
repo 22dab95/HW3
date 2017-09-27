@@ -142,7 +142,6 @@ ICodeNode *WhenStatementParser::parse_statement(Token *token) throw (string)
     }
 
     token = next_token(token); // consume END
-	token = next_token(token); // consume ;
 
     return if_node;
 }
