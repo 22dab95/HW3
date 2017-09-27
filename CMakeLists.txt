@@ -11,10 +11,28 @@ set(SOURCE_FILES Pascal.cpp Pascal.h
 
         wci/backend/interpreter/Executor.h
         wci/backend/interpreter/Executor.cpp
+        wci/backend/interpreter/RuntimeError.cpp
+        wci/backend/interpreter/RuntimeError.h
+        wci/backend/interpreter/RuntimeErrorHandler.cpp
+        wci/backend/interpreter/RuntimeErrorHandler.h
+
+        wci/backend/interpreter/executors/AssignmentExecutor.cpp
+        wci/backend/interpreter/executors/AssignmentExecutor.h
+        wci/backend/interpreter/executors/CompoundExecutor.cpp
+        wci/backend/interpreter/executors/CompoundExecutor.h
+        wci/backend/interpreter/executors/ExpressionExecutor.cpp
+        wci/backend/interpreter/executors/ExpressionExecutor.h
+        wci/backend/interpreter/executors/IfExecutor.cpp
+        wci/backend/interpreter/executors/IfExecutor.h
+        wci/backend/interpreter/executors/LoopExecutor.cpp
+        wci/backend/interpreter/executors/LoopExecutor.h
+        wci/backend/interpreter/executors/SelectExecutor.cpp
+        wci/backend/interpreter/executors/SelectExecutor.h
+        wci/backend/interpreter/executors/StatementExecutor.cpp
+        wci/backend/interpreter/executors/StatementExecutor.h
 
         wci/backend/compiler/CodeGenerator.cpp
         wci/backend/compiler/CodeGenerator.h
-
 
         wci/frontend/FrontendFactory.cpp
         wci/frontend/Parser.cpp
@@ -48,6 +66,27 @@ set(SOURCE_FILES Pascal.cpp Pascal.h
         wci/frontend/pascal/tokens/PascalSpecialSymbolToken.h
         wci/frontend/pascal/tokens/PascalStringToken.h
         wci/frontend/pascal/tokens/PascalWordToken.h
+
+        wci/frontend/pascal/parsers/AssignmentStatementParser.cpp
+        wci/frontend/pascal/parsers/AssignmentStatementParser.h
+        wci/frontend/pascal/parsers/CaseStatementParser.cpp
+        wci/frontend/pascal/parsers/CaseStatementParser.h
+        wci/frontend/pascal/parsers/CompoundStatementParser.cpp
+        wci/frontend/pascal/parsers/CompoundStatementParser.h
+        wci/frontend/pascal/parsers/ExpressionParser.cpp
+        wci/frontend/pascal/parsers/ExpressionParser.h
+        wci/frontend/pascal/parsers/ForStatementParser.cpp
+        wci/frontend/pascal/parsers/ForStatementParser.h
+        wci/frontend/pascal/parsers/IfStatementParser.cpp
+        wci/frontend/pascal/parsers/IfStatementParser.h
+        wci/frontend/pascal/parsers/RepeatStatementParser.cpp
+        wci/frontend/pascal/parsers/RepeatStatementParser.h
+        wci/frontend/pascal/parsers/StatementParser.cpp
+        wci/frontend/pascal/parsers/StatementParser.h
+        wci/frontend/pascal/parsers/WhenStatementParser.cpp
+        wci/frontend/pascal/parsers/WhenStatementParser.h
+        wci/frontend/pascal/parsers/WhileStatementParser.cpp
+        wci/frontend/pascal/parsers/WhileStatementParser.h
 
         wci/message/Message.cpp
         wci/message/Message.h
