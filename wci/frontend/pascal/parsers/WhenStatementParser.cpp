@@ -81,20 +81,66 @@ ICodeNode *WhenStatementParser::parse_statement(Token *token) throw (string)
         error_handler.flag(token, MISSING_THEN, this);
     }
 
-    // Parse the THEN statement.
+    // Parse the compound statement.
     // The IF node adopts the statement subtree as its second child.
     StatementParser statement_parser(this);
     if_node->add_child(statement_parser.parse_statement(token));
     token = current_token();
 
-    // Look for an OTHERWISE.
-    if (token->get_type() == (TokenType) PT_OTHERWISE)
-    {
-        token = next_token(token);  // consume the OTHERWISE
+    token = next_token(token); // EAT THE FUCKING SEMICOLON
 
-        // Parse the OTHERWISE statement.
-        // The IF node adopts the statement subtree as its third child.
-        if_node->add_child(statement_parser.parse_statement(token));
+
+    // TODO: Move this into a function that takes parent if node and add the results to its third child
+    // Currently not working because original IF node has too many children
+    while(token->get_type() != (TokenType) PT_END && token->get_type() != (TokenType) PT_OTHERWISE)
+    {
+    	// Parse expression
+    	// The IF node adopts the expression subtree as its first child.
+		if_node->add_child(expression_parser.parse_statement(token));
+
+		// Synchronize at the ARROW.
+		token = synchronize(ARROW_SET);
+
+		if (token->get_type() == (TokenType) PT_ARROW)
+		{
+			token = next_token(token);  // consume the ARROW
+		}
+		else {
+			// TODO: Add error handling for ARROW
+			error_handler.flag(token, MISSING_THEN, this);
+		}
+
+		// Parse the compound statement.
+		// The IF node adopts the statement subtree as its second child.
+		if_node->add_child(statement_parser.parse_statement(token));
+		token = current_token();
+
+		token = next_token(token); // EAT THE FUCKING SEMICOLON
+
+		// Look for an OTHERWISE.
+		if (token->get_type() == (TokenType) PT_OTHERWISE)
+		{
+			token = next_token(token);  // consume the OTHERWISE
+
+			// Synchronize at the ARROW.
+			token = synchronize(ARROW_SET);
+
+			if (token->get_type() == (TokenType) PT_ARROW)
+			{
+				token = next_token(token);  // consume the ARROW
+			}
+			else {
+				// TODO: Add error handling for ARROW
+				error_handler.flag(token, MISSING_THEN, this);
+			}
+
+			// Parse the compound statement.
+			// The IF node adopts the statement subtree as its third child.
+			if_node->add_child(statement_parser.parse_statement(token));
+
+			token = next_token(token); // consume END
+			token = next_token(token); // consume ;
+		}
     }
 
     return if_node;

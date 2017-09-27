@@ -48,6 +48,7 @@ private:
      * Initialize the synchronization set.
      */
     static void initialize();
+
 };
 
 }}}}  // namespace wci::frontend::pascal::parsers

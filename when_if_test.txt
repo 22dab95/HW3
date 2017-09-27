@@ -1,13 +1,6 @@
 BEGIN {IF statements}
     i := 3;
-
-    {Cascading IF THEN ELSEs.}
-    IF      i = 1 THEN f := 10
-    ELSE IF i = 2 THEN f := 20
-    ELSE IF i = 3 THEN f := 30
-    ELSE IF i = 4 THEN f := 40
-    ELSE               f := -1;
-	
+    
 	WHEN
         i = 1 => f := 10;
         i = 2 => f := 20;
@@ -15,5 +8,7 @@ BEGIN {IF statements}
         i = 4 => f := 40;
         OTHERWISE => f := -1
     END;
+	
+	{Result should be 30}
 	
 END.
