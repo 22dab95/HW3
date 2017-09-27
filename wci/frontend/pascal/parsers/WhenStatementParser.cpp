@@ -138,10 +138,11 @@ ICodeNode *WhenStatementParser::parse_statement(Token *token) throw (string)
 			// The IF node adopts the statement subtree as its third child.
 			if_node->add_child(statement_parser.parse_statement(token));
 
-			token = next_token(token); // consume END
-			token = next_token(token); // consume ;
 		}
     }
+
+    token = next_token(token); // consume END
+	token = next_token(token); // consume ;
 
     return if_node;
 }
