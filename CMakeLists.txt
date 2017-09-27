@@ -34,6 +34,7 @@ set(SOURCE_FILES Pascal.cpp Pascal.h
         wci/backend/compiler/CodeGenerator.cpp
         wci/backend/compiler/CodeGenerator.h
 
+
         wci/frontend/FrontendFactory.cpp
         wci/frontend/Parser.cpp
         wci/frontend/Scanner.cpp
@@ -67,6 +68,28 @@ set(SOURCE_FILES Pascal.cpp Pascal.h
         wci/frontend/pascal/tokens/PascalStringToken.h
         wci/frontend/pascal/tokens/PascalWordToken.h
 
+        wci/intermediate/icodeimpl/ICodeImpl.cpp
+        wci/intermediate/icodeimpl/ICodeImpl.h
+        wci/intermediate/icodeimpl/ICodeNodeImpl.cpp
+        wci/intermediate/icodeimpl/ICodeNodeImpl.h
+
+        wci/intermediate/symtabimpl/SymTabEntryImpl.cpp
+        wci/intermediate/symtabimpl/SymTabEntryImpl.h
+        wci/intermediate/symtabimpl/SymTabImpl.cpp
+        wci/intermediate/symtabimpl/SymTabImpl.h
+        wci/intermediate/symtabimpl/SymTabStackImpl.cpp
+        wci/intermediate/symtabimpl/SymTabStackImpl.h
+
+        wci/intermediate/ICode.h
+        wci/intermediate/ICodeFactory.cpp
+        wci/intermediate/ICodeFactory.h
+        wci/intermediate/ICodeNode.h
+        wci/intermediate/SymTab.h
+        wci/intermediate/SymTabEntry.h
+        wci/intermediate/SymTabFactory.cpp
+        wci/intermediate/SymTabFactory.h
+        wci/intermediate/SymTabStack.h
+
         wci/frontend/pascal/parsers/AssignmentStatementParser.cpp
         wci/frontend/pascal/parsers/AssignmentStatementParser.h
         wci/frontend/pascal/parsers/CaseStatementParser.cpp
@@ -92,6 +115,13 @@ set(SOURCE_FILES Pascal.cpp Pascal.h
         wci/message/Message.h
         wci/message/MessageHandler.cpp
         wci/message/MessageHandler.h
+        wci/message/MessageListener.h
+        wci/message/MessageProducer.h
+
+        wci/util/CrossReferencer.cpp
+        wci/util/CrossReferencer.h
+        wci/util/ParseTreePrinter.cpp
+        wci/util/ParseTreePrinter.h
 
         wci/DataValue.h)
 add_executable(Pascal ${SOURCE_FILES})
