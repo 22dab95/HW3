@@ -87,7 +87,7 @@ namespace wci { namespace frontend { namespace pascal { namespace parsers {
 
         token = next_token(token); // EAT THE FUCKING SEMICOLON
 
-        /
+        ICodeNode* temp_if_node = if_node;
 
         // TODO: Move this into a function that takes parent if node and add the results to its third child
         // Currently not working because original IF node has too many children
