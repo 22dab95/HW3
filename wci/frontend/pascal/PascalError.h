@@ -58,6 +58,7 @@ enum class PascalErrorCode
     MISSING_OF,
     MISSING_PERIOD,
     MISSING_PROGRAM,
+    MISSING_RIGHT_ARROW,
     MISSING_RIGHT_BRACKET,
     MISSING_RIGHT_PAREN,
     MISSING_SEMICOLON,
@@ -121,6 +122,7 @@ constexpr PascalErrorCode MISSING_LEFT_BRACKET = PascalErrorCode::MISSING_LEFT_B
 constexpr PascalErrorCode MISSING_OF = PascalErrorCode::MISSING_OF;
 constexpr PascalErrorCode MISSING_PERIOD = PascalErrorCode::MISSING_PERIOD;
 constexpr PascalErrorCode MISSING_PROGRAM = PascalErrorCode::MISSING_PROGRAM;
+            constexpr PascalErrorCode MISSING_RIGHT_ARROW = PascalErrorCode::MISSING_RIGHT_ARROW;
 constexpr PascalErrorCode MISSING_RIGHT_BRACKET = PascalErrorCode::MISSING_RIGHT_BRACKET;
 constexpr PascalErrorCode MISSING_RIGHT_PAREN = PascalErrorCode::MISSING_RIGHT_PAREN;
 constexpr PascalErrorCode MISSING_SEMICOLON = PascalErrorCode::MISSING_SEMICOLON;
