@@ -75,7 +75,6 @@ namespace wci { namespace frontend { namespace pascal { namespace parsers {
             token = next_token(token);  // consume the ARROW
         }
         else {
-            // TODO: Add error handling for ARROW
             error_handler.flag(token, MISSING_RIGHT_ARROW, this);
         }
 
@@ -108,7 +107,6 @@ namespace wci { namespace frontend { namespace pascal { namespace parsers {
                 token = next_token(token);  // consume the ARROW
             }
             else {
-                // TODO: Add error handling for ARROW
                 error_handler.flag(token, MISSING_RIGHT_ARROW, this);
             }
 
@@ -133,7 +131,6 @@ namespace wci { namespace frontend { namespace pascal { namespace parsers {
 		}
 		else 
 		{
-		    // TODO: Add error handling for ARROW
             error_handler.flag(token, MISSING_RIGHT_ARROW, this);
 		}
 

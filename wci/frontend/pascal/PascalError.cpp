@@ -140,7 +140,7 @@ void PascalError::initialize()
         "Not a type identifier",
         "Integer literal out of range",
         "Real literal out of range",
-        "Missing ->",
+        "Missing =>",
         "Stack overflow",
         "Nesting level too deep",
         "Too many subscripts",
