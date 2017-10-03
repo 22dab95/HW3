@@ -76,7 +76,7 @@ namespace wci { namespace frontend { namespace pascal { namespace parsers {
         }
         else {
             // TODO: Add error handling for ARROW
-            error_handler.flag(token, MISSING_THEN, this);
+            error_handler.flag(token, MISSING_RIGHT_ARROW, this);
         }
 
         // Parse the compound statement.
@@ -109,7 +109,7 @@ namespace wci { namespace frontend { namespace pascal { namespace parsers {
             }
             else {
                 // TODO: Add error handling for ARROW
-                error_handler.flag(token, MISSING_THEN, this);
+                error_handler.flag(token, MISSING_RIGHT_ARROW, this);
             }
 
             // Parse the compound statement.
@@ -134,7 +134,7 @@ namespace wci { namespace frontend { namespace pascal { namespace parsers {
 		else 
 		{
 		    // TODO: Add error handling for ARROW
-		    error_handler.flag(token, MISSING_THEN, this);
+            error_handler.flag(token, MISSING_RIGHT_ARROW, this);
 		}
 
 		// Parse the compound statement.
